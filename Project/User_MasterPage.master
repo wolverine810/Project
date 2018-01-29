@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <link href="css/icons.css" rel="stylesheet" />
     <title></title>
     <style>
         .modal-header, h4, .close {
@@ -20,6 +21,14 @@
 
         .modal-footer {
             background-color: #f9f9f9;
+        }
+
+        .navbar-default .navbar-nav > li.dropdown:hover > a,
+        .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+        
+
+        li.dropdown:hover > .dropdown-menu {
+            display: block;
         }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -42,20 +51,20 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="Home.aspx">Home <span class="sr-only">(current)</span></a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#"><i style="font-size:17px;position:relative; top:4px;" class="material-icons">desktop_windows</i>&nbsp&nbsp Computer Systems</a></li>
+                                <li><a href="#"><i style="font-size:17px;position:relative; top:4px;" class="material-icons">developer_board</i>&nbsp&nbsp Components</a></li>
+                                <li><a href="#"><i style="font-size:17px;position:relative; top:4px;" class="material-icons">gamepad</i>&nbsp&nbsp Gamming</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#"><i style="font-size:17px;position:relative; top:4px;" class="material-icons">router</i>&nbsp&nbsp Networking</a></li>
+                                <li><a href="#"><i style="font-size:17px;position:relative; top:4px;" class="material-icons">devices_other</i>&nbsp&nbsp Electronics</a></li>
                             </ul>
                         </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                     <div class="navbar-form navbar-right">
                         <div class="input-group">

@@ -14,15 +14,15 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="Images/la.jpg" alt="Los Angeles" style="width:100%" >
+                <img src="Images/la.jpg" alt="Los Angeles" style="width:100%; height:300px;" >
             </div>
 
             <div class="item">
-                <img src="Images/chicago.jpg" alt="Chicago" style="width:100%">
+                <img src="Images/chicago.jpg" alt="Chicago" style="width:100%; height:300px;">
             </div>
 
             <div class="item">
-                <img src="Images/ny.jpg" alt="New York" style="width:100%">
+                <img src="Images/ny.jpg" alt="New York" style="width:100%; height:300px;">
             </div>
         </div>
 
