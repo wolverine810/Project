@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User_MasterPage.master" AutoEventWireup="true" CodeFile="User_SignUp.aspx.cs" Inherits="User_SignUp" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User_MasterPage.master" AutoEventWireup="true" CodeFile="User_SignUp.aspx.cs" Inherits="User_SignUp"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -13,62 +13,62 @@
     </style>
     <br/>
     <br/>
-    <div class="container-fluid">
+    <div class="container-fluid" runat="server">
     <section class="container">
-		<div class="container-page">				
+		<div class="container-page" runat="server">				
 			<div class="col-md-6">
             <h3 class="dark-grey">Registration</h3>
 
             <div class="form-group col-lg-6">
                 <label>First Name</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="firstname"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group col-lg-6">
                 <label>Last Name</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="lastname"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group col-lg-12">
                 <label>Mobile Number</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="mobileno"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group col-lg-12">
                 <label>Home Number</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="homeno"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group col-lg-12">
                 <label>State</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="state"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group col-lg-12">
                 <label>Address</label>
-                <textarea class="form-control" id="" rows="3" style="width: 509px; height: 108px;"></textarea>
+                <asp:TextBox id="address"  CssClass="form-control" TextMode="multiline" Columns="50" Rows="3" style="width: 509px; height: 108px;" runat="server" />
             </div>
             <div class="form-group col-lg-12">
                 <label>Pin Code</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="pincode"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
 
             <div class="form-group col-lg-12">
                 <label>Email Address</label>
-                <input name="" class="form-control" id="" value="" type="">
+                <asp:TextBox ID="email"  CssClass="form-control" runat="server"></asp:TextBox>
             </div>
 
 
 
             <div class="form-group col-lg-6">
                 <label>Password</label>
-                <input name="" class="form-control" id="" value="" type="password">
+                <asp:TextBox ID="password"  CssClass="form-control" runat="server" type="password"></asp:TextBox>
             </div>
             <div class="form-group col-lg-6">
                 <label>Repeat Password</label>
-                <input name="" class="form-control" id="" value="" type="password">
+                <asp:TextBox   CssClass="form-control" runat="server"></asp:TextBox>
             </div>
 
 
 
         </div>
 		
-			<div class="col-md-6" data-spy="affix" data-offset-top="0">
+			<div class="col-md-6" data-spy="affix" data-offset-top="0" runat="server">
 				<h3 class="dark-grey">Terms and Conditions</h3>
 				<p>
 					By clicking on "Register" you agree to The Company's' Terms and Conditions
@@ -84,11 +84,13 @@
 					Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
 				</p>
 				
-				<button type="submit" class="btn btn-primary">Register</button>
+				<asp:Button CssClass="btn btn-primary" id="register" Text="Register"  runat="server" OnClick="Register_Click" />
 			</div>
 		</div>
 	</section>
 </div>
+
+   
    
 </asp:Content>
 
