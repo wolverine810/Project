@@ -37,14 +37,12 @@ public partial class User_MasterPage : System.Web.UI.MasterPage
                     if (email.Text == dr["Emailid"].ToString() && psw.Text == dr["Password"].ToString())
                     {
 
-                        //Session["username"] = dr["Emailid"].ToString();
-                        //Session["Name"] = dr["Name"].ToString();
-                        Response.Redirect("User_SignUp.aspx");
+                        Session["username"] = dr["Emailid"].ToString();
+                        Response.Redirect("Home.aspx");
 
                     }
                     else
                     {
-                        string display = "Invalid Username and Password";
                         conn.Close();
                     }
                 }

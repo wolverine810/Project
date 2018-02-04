@@ -16,52 +16,55 @@
     <div class="container-fluid" runat="server">
     <section class="container">
 		<div class="container-page" runat="server">				
-			<div class="col-md-6">
+			<div class="col-md-6" data-toggle="validator" role="form">
             <h3 class="dark-grey">Registration</h3>
 
             <div class="form-group col-lg-6">
-                <label>First Name</label>
-                <asp:TextBox ID="firstname"  CssClass="form-control" runat="server"></asp:TextBox>
+                <label for="firstname" class="control-label">First Name</label>
+                <asp:TextBox ID="firstname" CssClass="form-control" runat="server" required></asp:TextBox>
             </div>
             <div class="form-group col-lg-6">
                 <label>Last Name</label>
-                <asp:TextBox ID="lastname"  CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="lastname" CssClass="form-control" runat="server" required></asp:TextBox>
+                
             </div>
             <div class="form-group col-lg-12">
                 <label>Mobile Number</label>
-                <asp:TextBox ID="mobileno"  CssClass="form-control" runat="server"></asp:TextBox>
+                <div class="input-group">
+                    <span class="input-group-addon">+91</span>
+                    <asp:TextBox ID="mobileno" MaxLength="10" CssClass="form-control" runat="server" required></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidatormobileno" ValidationExpression="^[0-9]{10}$" ControlToValidate="mobileno" runat="server" ErrorMessage="Please enter a valid mobile number." ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+                </div>
             </div>
             <div class="form-group col-lg-12">
                 <label>Home Number</label>
-                <asp:TextBox ID="homeno"  CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="homeno" CssClass="form-control" runat="server" required></asp:TextBox>
             </div>
             <div class="form-group col-lg-12">
                 <label>State</label>
-                <asp:TextBox ID="state"  CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="state" CssClass="form-control" runat="server" required></asp:TextBox>
             </div>
             <div class="form-group col-lg-12">
                 <label>Address</label>
-                <asp:TextBox id="address"  CssClass="form-control" TextMode="multiline" Columns="50" Rows="3" style="width: 509px; height: 108px;" runat="server" />
+                <asp:TextBox ID="address" CssClass="form-control" TextMode="multiline" Columns="50" Rows="3" Style="width: 509px; height: 108px;" runat="server" required />
             </div>
             <div class="form-group col-lg-12">
                 <label>Pin Code</label>
-                <asp:TextBox ID="pincode"  CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="pincode" CssClass="form-control" runat="server" required></asp:TextBox>
             </div>
 
             <div class="form-group col-lg-12">
-                <label>Email Address</label>
-                <asp:TextBox ID="email"  CssClass="form-control" runat="server"></asp:TextBox>
+                <label for="email" class="control-label">Email Address</label>
+                <asp:TextBox ID="email" type="email"  CssClass="form-control" runat="server" required></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="email" runat="server" ErrorMessage="Invalid email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
             </div>
-
-
-
             <div class="form-group col-lg-6">
                 <label>Password</label>
-                <asp:TextBox ID="password"  CssClass="form-control" runat="server" type="password"></asp:TextBox>
+                <asp:TextBox ID="password" CssClass="form-control" runat="server" type="password" required></asp:TextBox>
             </div>
             <div class="form-group col-lg-6">
                 <label>Repeat Password</label>
-                <asp:TextBox   CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="form-control" runat="server" required></asp:TextBox>
             </div>
 
 
@@ -90,7 +93,7 @@
 	</section>
 </div>
 
-   
+  
    
 </asp:Content>
 
